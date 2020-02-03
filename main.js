@@ -4,18 +4,23 @@ document.addEventListener("DOMContentLoaded",function(event) {
     let playerScore = 0;
     let computerScore = 0;
     
-    playerArr = [];
-    computerArr = [];
     
     const dealB = document.getElementById("deal");
     const nextB = document.getElementById("next");
+    
+    playerArr = [];
+    computerArr = [];
     
     dealB.addEventListener("click",function(){
         turnNumber = 0;
         playerScore = 0;
         computerScore = 0;
         
+        let i; // 
+        let random; //
+        
         deck.load();
+        console.log(deck.cardArray);
         for(i = 0; i< 52; i++){ // this shuffles
             const temp = Math.floor(Math.random()*(i+1)); //creates random number
             const exchange = deck.cardArray[temp];
